@@ -1,0 +1,57 @@
+Sandbox SSP module -- TODO
+==========================
+
+* reorganise sound lists for all game modules
+** sounds events when a coin is picked up, player gets a booboo, etc
+
+* camera
+** prevent mouse based input
+** use a FAR less hacky method of updating the camera
+** follow camera - a camera that stands still but centres on the player
+** stationary camera - a camera that always look in a certain direction from a certain spot
+
+* monsters
+** waypoint navigation
+** attack animations
+** code to cause pain when colliding with the player... unless the player is above them.
+
+* pickups
+** weapons
+** powerups
+*** invulnerability
+*** super speed
+** checkpoint
+*** add variable to end level and proceed to the next map
+** light up player character
+
+* weapons
+** code to handle weapon damage
+** projectiles
+*** melee
+*** bombs/grenades
+**** timers
+**** gravity effects
+** affected by jumppads and teleports?
+** define trails
+** play travel sounds
+
+* box
+** headbutt activates and drops a pickup, the box is optionally destroyed
+
+* HUD
+*** revamp ssptest map to use them in a tutorial
+** icons for equipped armour and weapon
+
+* armour
+** model tags, and models
+** allow armours to have more than 1 setting defined, ie, both attract and flight
+
+* movement
+** slow down rotation, it's too snappy
+** automatic axis activation
+
+* obstacles
+** emitter ents, eg, icicles/rocks falling from above
+*** definition, yaw, pitch, speed, random seed
+***- definition: model, gravity, -hp
+** conditional obstacles (triggers?)

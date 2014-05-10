@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Sandbox" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="ssp">
+				<Option output="..\..\bin\sandbox_ssp.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="..\..\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="fps">
+				<Option output="..\..\bin\sandbox_fps.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="..\..\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add directory="..\sb" />
+				</Compiler>
+			</Target>
+			<Target title="master">
+				<Option output="..\..\bin\sandbox_master.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="..\..\" />
+				<Option object_output=".objs-master" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Compiler>
+					<Add option="-DSTANDALONE" />
+				</Compiler>
+				<Linker>
+					<Add library="zdll" />
+					<Add library="enet" />
+					<Add library="ws2_32" />
+					<Add library="winmm" />
+				</Linker>
+			</Target>
+			<Target title="rpg">
+				<Option output="..\..\bin\sandbox_rpg.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="..\..\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="movie">
+				<Option output="..\..\bin\sandbox_movie.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="..\..\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+			<Target title="krs">
+				<Option output="..\..\bin\sandbox_krs.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="..\..\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="ssp;fps;rpg;movie;krs;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-fomit-frame-pointer" />
+			<Add option="-O2" />
+			<Add option="-Wall" />
+			<Add option="-fsigned-char" />
+			<Add option="-fno-rtti" />
+			<Add option="-fno-exceptions" />
+			<Add directory="..\enet\include" />
+			<Add directory="..\include" />
+			<Add directory="..\engine" />
+			<Add directory="..\shared" />
+			<Add directory="..\windows" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="resources" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-s" />
+			<Add option="-mwindows" />
+			<Add library="SDL" />
+			<Add library="SDL_image" />
+			<Add library="SDL_mixer" />
+			<Add library="zdll" />
+			<Add library="opengl32" />
+			<Add library="enet" />
+			<Add library="ws2_32" />
+			<Add library="winmm" />
+			<Add directory="..\lib" />
+		</Linker>
+		<Unit filename="..\enet\include\enet\callbacks.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\enet\include\enet\enet.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\enet\include\enet\list.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\enet\include\enet\protocol.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\enet\include\enet\time.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\enet\include\enet\types.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\enet\include\enet\unix.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\enet\include\enet\utility.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\enet\include\enet\win32.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="..\engine\animmodel.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\bih.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\bih.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\blend.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\blob.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\client.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\command.cpp" />
+		<Unit filename="..\engine\console.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\decal.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\depthfx.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\dynlight.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\engine.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\explosion.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\glare.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\grass.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\lensflare.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\lightmap.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\lightmap.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\lightning.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\main.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\master.cpp">
+			<Option target="master" />
+		</Unit>
+		<Unit filename="..\engine\material.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\md2.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\md3.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\md5.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\model.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\movie.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\normal.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\obj.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\octa.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\octa.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\octaedit.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\octarender.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\pch.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\physics.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\pvs.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\ragdoll.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\rendergl.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\rendermodel.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\renderparticles.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\rendersky.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\rendertarget.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\rendertext.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\renderva.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\scale.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\server.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\serverbrowser.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\shader.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\shadowmap.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\skelmodel.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\sound.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\textedit.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\texture.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\texture.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\tristrip.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\ui.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\vertmodel.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\water.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\world.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\world.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\engine\worldio.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\fpsgame\ai.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\ai.h">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\aiman.h">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\capture.h">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\client.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\ctf.h">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\entities.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\extinfo.h">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\fps.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\game.h">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\monster.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\movable.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\render.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\scoreboard.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\server.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\waypoint.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\fpsgame\weapon.cpp">
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="..\include\GL\glext.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_active.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_audio.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_byteorder.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_cdrom.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_config.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_config_macosx.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_config_win32.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_copying.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_cpuinfo.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_endian.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_error.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_events.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_getenv.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_image.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_joystick.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_keyboard.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_keysym.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_loadso.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_main.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_mixer.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_mouse.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_mutex.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_name.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_opengl.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_platform.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_quit.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_rwops.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_stdinc.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_syswm.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_thread.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_timer.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_types.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_version.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\SDL_video.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\begin_code.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\close_code.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\wincompat.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\zconf.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\include\zlib.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\krs.cpp">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\krsai.cpp">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\krsents.cpp">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\krsgame.h">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\krshud.cpp">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\krsrender.cpp">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\krsscript.cpp">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\krsstubs.cpp">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\krsgame\waypoint.cpp">
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\moviecube\action.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\action.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\botmgr.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\camera.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\characterinfo.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\client.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\clientmode.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\clientmode.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\control.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\control.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\entities.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\extinfo.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\game.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\mapentities.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\mapentities.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\modeinfo.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\movable.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\moviecube.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\render.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\server.cpp">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\moviecube\servmode.h">
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="..\rpggame\rpg.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgaction.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgai.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgcamera.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgchar.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgconfig.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgcontainer.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgeffect.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgentities.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpggame.h">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpggui.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpghud.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgio.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgitem.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgobstacle.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgplatform.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgproj.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgrender.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgscript.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgstats.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgstatus.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgstubs.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgtest.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\rpgtrigger.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\rpggame\waypoint.cpp">
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="..\shared\command.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\shared\crypto.cpp" />
+		<Unit filename="..\shared\cube.h">
+			<Option compile="1" />
+			<Option weight="0" />
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\shared\ents.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\shared\geom.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\shared\geom.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\shared\iengine.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\shared\igame.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\shared\stream.cpp" />
+		<Unit filename="..\shared\tools.cpp" />
+		<Unit filename="..\shared\tools.h">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\shared\zip.cpp">
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="..\sspgame\ssp.cpp">
+			<Option target="ssp" />
+		</Unit>
+		<Unit filename="..\sspgame\sspent.cpp">
+			<Option target="ssp" />
+		</Unit>
+		<Unit filename="..\sspgame\sspentities.cpp">
+			<Option target="ssp" />
+		</Unit>
+		<Unit filename="..\sspgame\sspgame.h">
+			<Option target="ssp" />
+		</Unit>
+		<Unit filename="..\sspgame\sspmonster.cpp">
+			<Option target="ssp" />
+		</Unit>
+		<Unit filename="..\sspgame\ssprender.cpp">
+			<Option target="ssp" />
+		</Unit>
+		<Unit filename="..\sspgame\sspstubs.cpp">
+			<Option target="ssp" />
+		</Unit>
+		<Unit filename="..\sspgame\sspweapons.cpp">
+			<Option target="ssp" />
+		</Unit>
+		<Unit filename="resources\fps.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="fps" />
+		</Unit>
+		<Unit filename="resources\krs.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="resources\mc.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="movie" />
+		</Unit>
+		<Unit filename="resources\mingw.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="ssp" />
+			<Option target="fps" />
+			<Option target="rpg" />
+			<Option target="movie" />
+			<Option target="krs" />
+		</Unit>
+		<Unit filename="resources\rpg.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="rpg" />
+		</Unit>
+		<Unit filename="resources\sb.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="master" />
+		</Unit>
+		<Unit filename="resources\ssp.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="ssp" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

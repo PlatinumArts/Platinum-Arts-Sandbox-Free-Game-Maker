@@ -1,0 +1,2 @@
+0 - player's faction
+1 - enemy faction

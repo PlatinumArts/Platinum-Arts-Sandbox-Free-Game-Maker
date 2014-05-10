@@ -1,0 +1,81 @@
+Changelog 2.8.3
+===============
+
+RPG Bugfixes
+* Fix paperdoll's feet slot
+* Fix savegame temporary files not renaming properly on Windows
+
+Changelog 2.8.2
+===============
+
+Generic changes
+* as a fallback, entities without a dedicated QuickEdit GUI will generate one with fallback dummy attributes with a range of -10000 --> 10000 (fixed)
+* embed mapmodel previews into mapmodel quickedit menu"
+
+
+SSP Changes
+* allow pickup_armour types to have arbitrary icons and colours set for them.
+* basic Goomba level AI
+* DJUMP armour, simpler version of the FLY armour that allows only one jump in the air.
+* homing mines and grenade projectile types.
+* various tweaks,cleanup and optimisation
+* platforms
+
+
+Generic Bugfixes
+* Allow uitoggle elements to have tooltips like other uibutton derived types
+* Fix material filter in the edit menu
+* Possible crash from showenttext 0
+
+
+FPS Bugfixes
+* correct spacetf typo
+* renamed "banana" entities back to 'base"
+* fix range for 'playermodel'
+
+
+RPG bugfixes
+* Fix calculation of extra empty inventory, barter and looting buttons.
+* Fix some potential crashes, such as when r_setref was called outside of a game.
+
+
+SSP Bugfixes
+* enemies are no longer simulated in editmode with the ability to hurt the player.
+* fly/doublejump armour no longer causes enemies to jetpack upwards
+
+
+Changelog 2.8.1
+===============
+
+Linux
+* fixed permission errors with install.sh script, and improved it for package creators. People who used the previous script SHOULD MAKE SURE TO CLEAN UP EVERYTHING CREATED/MOVED BY THE PREVIOUS SCRIPT!
+
+
+Art
+* Courtesy of northstar, mapmodel preview shots for 163 odd models.
+
+
+Generic changes
+* Save map option in the editing menu (how embarrassing!)
+* getcurmap command extended to all game modules for getting the name of the current map.
+* as a fallback, entities without a dedicated QuickEdit GUI will generate one with fallback dummy attributes with a range of -10000 --> 10000
+
+
+FPS changes
+* allow scrolling over an item entity to switch between items during editmode
+
+
+SSP changes
+* make 2HP state a lighter yellow.
+* enumerate pickups/boxes written by the exporter.
+
+
+Generic bugfixes
+* fixed model scripts that triggered infinitely recursive loading of themselves. (Really this time)
+* fix editfacewentpush behaviour when an entity is selected
+
+
+SSP bugfixes
+* fixed HUD paths and images
+* fixed box rendering/collision offsets
+* fixed lightning particles for "attracted" pickups.

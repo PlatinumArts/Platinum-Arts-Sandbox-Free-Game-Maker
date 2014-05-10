@@ -1,0 +1,9 @@
+changelog:
+
+20091204:
+*removed monsters
+*basic waypoint entity added
+*Control class (will be used as common interface for NPC clients like actors or ai)
+*command: addnpc adds an NPC client with ControlActor to the first waypoint in map
+*deactivated ai until Control class is fully working
+*added some workarounds for controls in aiman.h (aiman will be changed to npcmananager for actor and ai later)  

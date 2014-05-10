@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=Side Scrolling Platformer
+GenericName=Sandbox SSP
+Name=Sandbox SSP
+Icon=sandbox_ssp
+Exec=sandbox -gssp
+Type=Application
+Categories=Applications;Game;
+StartupNotify=false

@@ -1,0 +1,17 @@
+Weapons
+* water pistol (default)
+* water bombs
+* super soaker - fires a constant stream (chaingun)
+
+we still need replacements for the following
+* rocket launcher
+* shotgun - super soaker burst fire mode?
+* rifle
+* melee
+
+power ups
+* rain coat - temporary invulnerability
+* dry clothes - reduces saturation
+* waterproofing salve - armour, washed away when attacked instead of saturating the player
+
+quad - keep as quad?

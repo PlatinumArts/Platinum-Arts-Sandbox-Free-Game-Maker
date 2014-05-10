@@ -1,0 +1,16 @@
+Linux Users, chances are you'll need to compile the server and the client from source.
+
+The source files are unfortunately in DOS format, so you'll need to search your distrution's package manager for a utility names 'tofrodos'. While it's harmless, the enet files WILL cause problems while in DOS format
+
+once that's done installing, just open a terminal and copy the following line into it, after changing your directory the src/
+
+fromdos enet/* && fromdos enet/*/* && chmod +x enet/configure && make install
+
+for any subsequent builds, make clean and make install are all you'll need.
+
+Make sure you have the needed SDL libs installed. normal sdl, with sdl mixer, and sdl image, and probably other packages like smpeg and timidity to allow sdl_mixer to access additional audio formats.
+
+alternatively, if you wish, you can just type sh build.sh and it'll take care of pretty much everything
+
+for further information, take a look at the wiki
+http://kids.platinumarts.net/wiki

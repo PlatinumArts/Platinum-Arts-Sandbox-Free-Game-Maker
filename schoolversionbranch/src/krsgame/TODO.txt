@@ -1,0 +1,46 @@
+Vehicle Things:
+	-add traction support
+	-proper acceleration
+
+Entites:
+	-tires
+	-oilspill
+	
+Sounds:
+	-recived cash,
+	-spent cash,
+	-smash vehicle 1
+	-smash vehicle 2,
+	-using nos,
+	-vehicle idle,
+	-vehicle accelerate,
+	
+Models:
+	Entites:
+		-nos
+		-playerfinish (flag)
+		-tires
+		-oilspill
+		-spikestrip
+		
+	Vehicles:
+		-car
+		-truck
+	
+Code:
+	-mdl roll (for proper vehicle picth and roll alighment on surfaces not flat)
+	-gamemodes
+	-player1->eyeheight higher when in firstperson view.
+	
+Hud:
+	-scaledown speedometer
+	-dashboard (when firstperson view)
+	-nos bar (how much nos left!)
+	
+Store:
+	-purchase entities via krsitem code.
+	-enumerate owned items and display in gui
+	
+GUI:
+	-player owned items
+	-player owned vehicles

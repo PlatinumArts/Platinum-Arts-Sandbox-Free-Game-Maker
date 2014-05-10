@@ -1,0 +1,19 @@
+classes for command queuing:
+
+changelog:
+
+20100708
+*currently broken, changing access to QueuedCommandMgr::current
+20100712
+*
+
+TODO:
+*virtual gettype method for Action (exception handling on bad cast)
+*common entity lookup table
+*userdata for signals
+
+
+documentation:
+
+soon
+

@@ -1,0 +1,138 @@
+/*
+	A simple bit of sample code for the vehicle simulation project
+	this will contain: much more complicated physics then this engine
+	can possibly ever offer.
+	
+	This is non-workable code, that will be tied into
+	the vehicle simulation project, when done.
+	
+	While it may contain many other non working, or unrelated bits of text
+	it will be there for refrence, to allow a better understanding of the
+	complicated side of things.
+*/
+
+
+/// Vehicle Physics Explained...
+
+[SlowDown_On_Steering]
+{
+	coefficients = abs(sin(theta))I - abs(cos(theta))J;
+	/*
+		I and J are unit vectors aligned with and perpendicular
+		to the long axis of the vehicle,respectively, and theta
+		is the angle of the tires while steering relitive to the
+		vehicle's body.
+	*/
+}
+
+[Accelerating_Force]
+{
+	/*
+		The vehicles acceleration force, can be determined by
+		the radius, R, of a circle that would be made if that
+		vehicle continued to turn in it's current direction.
+	*/
+	
+	return (M * V^2/R);
+	
+	/*
+		Where V represnets the vehicles linear speed. For eg
+		when you're vehicle is moving on a strightaway, that
+		vehicle has a net friction of zero at the front tires
+		when you turn into a curve you get a negitive component
+		from cos(theta), best viewed as -cos(theta), which is
+		the decelerating force.
+	*/
+}
+
+[Vehicle_Friction]
+{
+	/*
+		Vehcile friction will be kenetic, friction is simply
+		explained as (C * W), where C will be the vehicles
+		coefficient of friction between the tire and surface
+		of which the vehicle is on. Where W will be the weight
+		of the vehcile.
+	*/
+	
+	return (C * W);
+	
+	/*
+		For non-sliding friction, the total magnitude of the
+		I and J components in the SlowDown_On_Steering stub
+		MUST BE NO MORE then the maximal force of static
+		friction, for example.
+	*/
+	
+	return (sqrt((A . FA)^2 + (B . FA)^2) <= C * W);
+	
+	/*
+		where FA is the total of accelerating force. If that's
+		not the case, the vehicle will get into a sliding type
+		friction.
+	*/
+}
+
+/* Other bits and pieces */
+
+/*
+	Okay lets consider this, lets say we have a vehicle moving
+	in a straight line. What forces are at play here? Some would
+	think none, I thought of non at first, it only took me awhile
+	to think that something as simple as a moving vehicle in line
+	is quite more complicated as one would suspect.
+	
+	First and foremost there is the tractive force, this is the
+	force deliverd by the engine via the rear wheels, or the front
+	wheels depending on the type of vehicle, but for the sake of
+	simplicity lets just talk about the rear wheels. Some would 
+	think the engine turns the wheels forward, when in theory it
+	actually applies a torque on the wheel, the wheel push backwards
+	on the surface of which is underneath and in reaction, that
+	same surface pushes back in a forward direction.
+	
+	the tractive force is thus equivalent in magnitude to a variable
+	engine force, which is controleld by the user.
+	
+	Ffraction = u * engineforce;
+	where u is a unit vector in the direction the vehicle is heading.
+	
+	If this where the only force, the vehicle would accelerate to
+	ifinite speeds. This is clearly not the case in real life, people
+	and children, Hirato and all who are reading this welcome to the
+	world of resistance forces.
+	
+	On a vehicle the first and most important one is air resistance,
+	a.k.a aerodynamic drag. This force is so important because it is
+	proportional to the square of the velocity. When we're driving
+	a vehicle FAST this becomes the most important resistance force.
+	
+	drag = -Cdrag * v * |v|
+	where Cdrag is a constant and v is the velocity vector, and the
+	notation |v| referes to the magnitude of vector v.
+	
+	The magnitude of the velocity vector is more commonly know as the
+	speed.
+	
+	Then we have yet another resistance, this is the rolling resistance,
+	this resistance is caused by friction between the material on the
+	vehicles tires and the surface on which thoes wheels roll along, 
+	including the friciton in the axels.
+	
+	Frr = -Crr * v
+	where Crr is a constant and v is the velocity vector.
+	
+	At low speeds the rolling resistance is the main resistance force,
+	however at high speeds the drag resistance takes over in magnitude.
+	At approximently 100km/h(60 mph, 30 m/s) This means Crr MUST BE
+	EXACTLY 30 times the value of Cdrag.
+	
+	The total longtitudinal force is the vector sum of all of all forces
+	Flong = Ffraction + Fdrag + Frr
+	
+	BUT REMEBER if you're driving in a stright line then the drag and
+	rolling resitance forces will be in the opposite direction from the
+	traction force. So in terms of magnitude, we have to subtract the
+	resistance force from the traction force. When the vehicle is moving
+	at a constant speed the forces are in equilibrium and Flong is zero.
+*/

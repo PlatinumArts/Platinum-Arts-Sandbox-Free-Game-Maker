@@ -1,0 +1,2 @@
+0 - NULL statusgroup
+1 - Medium Pain

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=First Person Shooter
+GenericName=Sandbox FPS
+Name=Sandbox FPS
+Icon=sandbox_fps
+Exec=sandbox -gfps
+Type=Application
+Categories=Applications;Game;
+StartupNotify=false

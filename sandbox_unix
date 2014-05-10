@@ -1,0 +1,153 @@
+#!/bin/bash
+# SANDBOX_DIR should refer to the directory in which sandbox is placed, the default should be good enough.
+#SANDBOX_DIR=~/sandbox
+#SANDBOX_DIR=/usr/local/sandbox
+SANDBOX_DIR=$(dirname $(readlink -f $0))
+
+SANDBOX_OPTIONS=""
+SANDBOX_MODULE="fps"
+SANDBOX_HOME="${HOME}/.platinumarts"
+SANDBOX_TYPE="client"
+SANDBOX_PREFIX="sandbox"
+SANDBOX_EXEC=""
+
+while [ $# -ne 0 ]
+do
+	case $1 in
+		"-h"|"-?"|"-help"|"--help")
+			echo ""
+			echo "Sandbox Linux Launching Script"
+			echo "Example: ./sandbox_unix -gssp -t1"
+			echo ""
+			echo "   Script Arguments"
+			echo "  -h|-?|-help|--help	show this help message"
+			echo "  -g<string>		set gamemode to <string> (default: fps)"
+			echo "				available modes: fps, krs, movie, rpg, ssp"
+			echo "  --server		launch dedicated server binary instead"
+			echo "  --master		launch a masterserver for server registration"
+			echo "				NOTE: compiled masterserver not included"
+			echo "  --debug		starts the debug build(s) inside GDB"
+			echo "				note that all arguments passed to this script will be"
+			echo "				passed to sandbox when run is invokved in gdb."
+			echo "				it's recommended that you do this in windowed mode (-t0)"
+			echo ""
+			echo "   Client Options"
+			echo "  -q<string>		use <string> as the home directory (default: ~/.platinumarts)"
+			echo "  -k<string>		mounts <string> as a package directory"
+			echo "  -r<string>		executes <string> before launching, use instead of arguments such as -t, -a, -h, etc"
+			echo "  -t<num>		sets fullscreen to <num>"
+			echo "  -d<num>		runs a dedicated server (0), or a listen server (1)"
+			echo "  -w<num>		sets window width, height is set to width * 3 / 4 unless also provided"
+			echo "  -h<num>		sets window height, width is set to height * 4 / 3 unless also provided"
+			echo "  -z<num>		sets depth (z) buffer bits (do not touch)"
+			echo "  -b<num>		sets colour bits (usually 32 bit)"
+			echo "  -a<num>		sets anti aliasing to <num>"
+			echo "  -v<num>		sets vsync to <num> -- -1 for auto"
+			echo "  -t<num>		sets fullscreen to <num>"
+			echo "  -s<num>		sets stencil buffer bits to <num> (do not touch)"
+			echo "  -f<num>		sets renderpath/shader precision"
+			echo "		0 - turns shaders off"
+			echo "		1 - 3 sets shader precision for ASM/GLSL renderpath"
+			echo "		4 - 6 sets shader precision for GLSL renderpath"
+			echo "  -l<string>		loads map <string> after initialisation"
+			echo "  -x<string>		executes script <string> after initialisation"
+			echo ""
+			echo "  Server Options"
+			echo "  NOTE: the dedicated server binary uses initserver.cfg, which overrides the below"
+			echo "  -u<num>		sets the upload rate to <num>"
+			echo "  -c<num>		sets the maximum amount of clients (max: 127 humans)"
+			echo "  -i<string>		sets the server's ip address (use with caution)"
+			echo "  -j<num>		sets the port to use for server connections"
+			echo "  -m<string>		sets the masterserver's URL to <string>"
+			echo "  -q<string>		use <string> as the home directory (default: ~/.platinumarts)"
+			echo "  -k<string>		mounts <string> as a package directory"
+			echo ""
+			echo "Sandbox Script by Kevin \"Hirato Kirata\" Meyer"
+			echo "(c) 2008-2011 - zlib/libpng licensed"
+			echo ""
+
+			exit 1
+		;;
+	esac
+
+	tag=$(expr substr "$1" 1 2)
+	argument=$(expr substr "$1" 3 1022)
+
+	case $tag in
+		"-g")
+			SANDBOX_MODULE=$argument
+		;;
+		"-q")
+			SANDBOX_HOME="\"$argument\""
+		;;
+		"--")
+			case $argument in
+			"server")
+				SANDBOX_TYPE="server"
+			;;
+			"master")
+				SANDBOX_TYPE="master"
+			;;
+			"debug")
+				SANDBOX_PREFIX="debug"
+				SANDBOX_EXEC="gdb --args"
+			;;
+			esac
+		;;
+		*)
+			SANDBOX_OPTIONS+=" \"$tag$argument\""
+		;;
+	esac
+
+	shift
+done
+
+case $(uname -m) in
+i386|i486|i586|i686)
+  MACHINE_BIT=32
+  ;;
+*)
+  MACHINE_BIT=64 #assume 64bit otherwise
+  ;;
+esac
+
+function failed {
+	echo ""
+	echo "A problem was encountered, please check which of the following it is."
+	echo "1) there's no ${SANDBOX_TYPE} for module ${SANDBOX_MODULE}"
+	echo "2) There isn't an available executable for your architecture; $(uname -m)"
+	echo "3) the executable was moved"
+	echo "please make sure that ${SANDBOX_DIR}/bin/${SANDBOX_PREFIX}_${SANDBOX_TYPE}_${MACHINE_BIT}_${SANDBOX_MODULE} exists. If it doesn't..."
+	echo "install the sdl, sdl-image and sdl-mixer DEVELOPMENT libraries and use \"make -C ${SANDBOX_DIR}/src install\" to compile a binary"
+	echo ""
+	exit 1
+}
+
+
+cd ${SANDBOX_DIR}
+case ${SANDBOX_TYPE} in
+	"client")
+		if [ -a bin/${SANDBOX_PREFIX}_client_${MACHINE_BIT}_${SANDBOX_MODULE} ]
+		then
+			eval ${SANDBOX_EXEC} ./bin/${SANDBOX_PREFIX}_client_${MACHINE_BIT}_${SANDBOX_MODULE} -q${SANDBOX_HOME} -r ${SANDBOX_OPTIONS}
+		else
+			failed
+		fi
+	;;
+	"server")
+		if [ -a bin/${SANDBOX_PREFIX}_server_${MACHINE_BIT}_${SANDBOX_MODULE} ]
+		then
+			eval ${SANDBOX_EXEC} ./bin/${SANDBOX_PREFIX}_server_${MACHINE_BIT}_${SANDBOX_MODULE}  -q${SANDBOX_HOME} ${SANDBOX_OPTIONS}
+		else
+			failed
+		fi
+	;;
+	"master")
+		if [ -a bin/${SANDBOX_PREFIX}_master ]
+		then
+			eval ${SANDBOX_EXEC} ./bin/${SANDBOX_PREFIX}_master
+		else
+			failed
+		fi
+	;;
+esac

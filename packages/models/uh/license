@@ -1,0 +1,105 @@
+==========================================================================================
+GENERAL NOTES
+==========================================================================================
+UniHuman Character models used in this work.
+
+UniHuman can be downloaded at "http://unihuman.yolasite.com/"
+
+
+==========================================================================================
+LICENSE NOTES - 
+==========================================================================================
+
+author: 'offtools'
+Thomas Achtner
+e-mail: info@offtools.de
+
+===================================================================================================
+The following files have been licensed under 
+Creative Commons Attribution-Share Alike 3.0
+http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB
+===================================================================================================
+
+anim
+anim/man
+anim/man/lookleft.md5anim
+anim/man/anims.cfg
+anim/man/back.md5anim
+anim/man/run.md5anim
+anim/man/straferight.md5anim
+anim/man/strafeleft.md5anim
+anim/man/lookright.md5anim
+anim/man/hold1.md5anim
+anim/man/greet.md5anim
+anim/man/dance1.md5anim
+anim/man/walk2.md5anim
+anim/man/idle.md5anim
+anim/man/jump.md5anim
+anim/man/sit.md5anim
+attach
+attach/jacket1
+attach/jacket1/mesh.md5mesh
+attach/jacket1/md5.cfg
+attach/jacket1/jacket_uh-man-jacket.tga
+attach/jacket1/skin-jacket.png
+attach/hair1
+attach/hair1/hair_uh-man-hair.tga
+attach/hair1/md5.cfg
+attach/hair1/skin-hair.png
+attach/hair1/mesh.md5mesh
+attach/trouser1
+attach/trouser1/mesh.md5mesh
+attach/trouser1/md5.cfg
+attach/trouser1/trouser_uh-man-trouser.tga
+attach/trouser1/skin-trouser.png
+attach/rshoe
+attach/rshoe/rshoe.md3
+attach/rshoe/md3.cfg
+attach/rshoe/skin.png
+attach/lshoe
+attach/lshoe/md3.cfg
+attach/lshoe/lshoe.md3
+attach/lshoe/skin.png
+chars
+chars/man
+chars/man/body.jpg
+chars/man/md5.cfg
+chars/man/legs.jpg
+chars/man/head.jpg
+chars/man/man.md5mesh
+chars/man/old
+chars/man/old/skin-body.png
+chars/man/old/skin-head.png
+chars/man/old/skin-legs.png
+
+=========================================================================================
+
+Attribution-Share Alike 3.0 Unported
+
+This license is acceptable for Free Cultural Works.
+
+You are free:
+
+    * to copy, distribute, display, and perform the work
+    * to make derivative works
+
+
+Under the following conditions:
+
+Attribution — You must give the original author credit.
+
+Share Alike — If you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar or a compatible license.
+
+==========================================================================================
+
+See:
+
+http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB
+
+for the original "human readable" document.
+
+http://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+for the full legal code. 
+
+

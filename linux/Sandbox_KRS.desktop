@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=Kart Racing Simulator
+GenericName=Sandbox KRS
+Name=Sandbox KRS
+Icon=sandbox_krs
+Exec=sandbox -gkrs
+Type=Application
+Categories=Applications;Game;
+StartupNotify=False

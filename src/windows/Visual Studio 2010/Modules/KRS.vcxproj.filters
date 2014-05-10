@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e381579f-1879-460e-b2dd-38677339c67f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{51bdab80-2e7d-4020-8f33-a2a01a872363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\world">
+      <UniqueIdentifier>{69925100-3e47-4598-9bd2-40d6bf4c400d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\system">
+      <UniqueIdentifier>{c1eada73-bfbf-43d1-af33-bb8206c3bd34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\render">
+      <UniqueIdentifier>{e8f781d2-90fd-4421-9ecd-8a15260d1b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\cs">
+      <UniqueIdentifier>{2c548e9b-b478-44a8-ad6e-928ae0ed6ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{a9a50e0a-7004-4692-bd56-2ef691851315}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\shared\command.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\shared\cube.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\shared\ents.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\shared\geom.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\shared\iengine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\shared\igame.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\shared\tools.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\lightmap.h">
+      <Filter>Engine\world</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\mpr.h">
+      <Filter>Engine\world</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\octa.h">
+      <Filter>Engine\world</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\world.h">
+      <Filter>Engine\world</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\animmodel.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\bih.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\depthfx.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\explosion.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\iqm.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\lensflare.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\lightning.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\md2.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\md3.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\md5.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\model.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\obj.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\ragdoll.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\rendertarget.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\scale.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\skelmodel.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\smd.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\textedit.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\texture.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\varray.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\vertmodel.h">
+      <Filter>Engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\krsgame\krsgame.h">
+      <Filter>Module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\engine\engine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\shared\crypto.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\shared\geom.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\shared\stream.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\shared\tools.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\shared\zip.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\blend.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\lightmap.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\normal.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\octa.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\octaedit.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\octarender.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\physics.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\pvs.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\world.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\worldio.cpp">
+      <Filter>Engine\world</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\command.cpp">
+      <Filter>Engine\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\console.cpp">
+      <Filter>Engine\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\main.cpp">
+      <Filter>Engine\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\menus.cpp">
+      <Filter>Engine\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\movie.cpp">
+      <Filter>Engine\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\sound.cpp">
+      <Filter>Engine\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\3dgui.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\bih.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\blob.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\decal.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\dynlight.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\glare.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\grass.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\material.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\rendergl.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\rendermodel.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\renderparticles.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\rendersky.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\rendertext.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\renderva.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\shader.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\shadowmap.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\texture.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\water.cpp">
+      <Filter>Engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\client.cpp">
+      <Filter>Engine\cs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\server.cpp">
+      <Filter>Engine\cs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\engine\serverbrowser.cpp">
+      <Filter>Engine\cs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\krsgame\krs.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\krsgame\krsents.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\krsgame\krshud.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\krsgame\krsrender.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\krsgame\krsscript.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\krsgame\krsstubs.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDL_win32_main.c" />
+    <ClCompile Include="..\..\..\krsgame\krsai.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\krsgame\waypoint.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\sandbox.rc" />
+  </ItemGroup>
+</Project>

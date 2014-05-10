@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0E65017D-9A4F-4752-8862-A34403A88828}</ProjectGuid>
+    <RootNamespace>KRS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\KRS_Release/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\KRS_Release/</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\KRS_Release/</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\KRS_Release/</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\krsgame;..\..\..\enet\include;..\..\..\shared;..\..\..\engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;__MSVC__;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <AssemblerListingLocation>.\KRS_Release/</AssemblerListingLocation>
+      <ObjectFileName>.\KRS_Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\KRS_Release/</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>enet.lib;zdll.lib;opengl32.lib;SDL.lib;SDL_image.lib;ws2_32.lib;SDL_mixer.lib;winmm.lib;dbghelp.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\bin\sandbox_krs.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\krsgame;..\..\..\enet\include;..\..\..\shared;..\..\..\engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;__MSVC__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <AssemblerListingLocation>.\KRS_Release/</AssemblerListingLocation>
+      <ObjectFileName>.\KRS_Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\KRS_Release/</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>enet.lib;zdll.lib;opengl32.lib;SDL.lib;SDL_image.lib;ws2_32.lib;SDL_mixer.lib;winmm.lib;dbghelp.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\bin\sandbox_krs.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\shared\command.h" />
+    <ClInclude Include="..\..\..\shared\cube.h" />
+    <ClInclude Include="..\..\..\shared\ents.h" />
+    <ClInclude Include="..\..\..\shared\geom.h" />
+    <ClInclude Include="..\..\..\shared\iengine.h" />
+    <ClInclude Include="..\..\..\shared\igame.h" />
+    <ClInclude Include="..\..\..\shared\tools.h" />
+    <ClInclude Include="..\..\..\engine\lightmap.h" />
+    <ClInclude Include="..\..\..\engine\mpr.h" />
+    <ClInclude Include="..\..\..\engine\octa.h" />
+    <ClInclude Include="..\..\..\engine\world.h" />
+    <ClInclude Include="..\..\..\engine\animmodel.h" />
+    <ClInclude Include="..\..\..\engine\bih.h" />
+    <ClInclude Include="..\..\..\engine\depthfx.h" />
+    <ClInclude Include="..\..\..\engine\explosion.h" />
+    <ClInclude Include="..\..\..\engine\iqm.h" />
+    <ClInclude Include="..\..\..\engine\lensflare.h" />
+    <ClInclude Include="..\..\..\engine\lightning.h" />
+    <ClInclude Include="..\..\..\engine\md2.h" />
+    <ClInclude Include="..\..\..\engine\md3.h" />
+    <ClInclude Include="..\..\..\engine\md5.h" />
+    <ClInclude Include="..\..\..\engine\model.h" />
+    <ClInclude Include="..\..\..\engine\obj.h" />
+    <ClInclude Include="..\..\..\engine\ragdoll.h" />
+    <ClInclude Include="..\..\..\engine\rendertarget.h" />
+    <ClInclude Include="..\..\..\engine\scale.h" />
+    <ClInclude Include="..\..\..\engine\skelmodel.h" />
+    <ClInclude Include="..\..\..\engine\smd.h" />
+    <ClInclude Include="..\..\..\engine\textedit.h" />
+    <ClInclude Include="..\..\..\engine\texture.h" />
+    <ClInclude Include="..\..\..\engine\varray.h" />
+    <ClInclude Include="..\..\..\engine\vertmodel.h" />
+    <ClInclude Include="..\..\..\krsgame\krsgame.h" />
+    <ClInclude Include="..\..\..\engine\engine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\krsgame\krsai.cpp" />
+    <ClCompile Include="..\..\..\krsgame\waypoint.cpp" />
+    <ClCompile Include="..\..\..\shared\crypto.cpp" />
+    <ClCompile Include="..\..\..\shared\geom.cpp" />
+    <ClCompile Include="..\..\..\shared\stream.cpp" />
+    <ClCompile Include="..\..\..\shared\tools.cpp" />
+    <ClCompile Include="..\..\..\shared\zip.cpp" />
+    <ClCompile Include="..\..\..\engine\blend.cpp" />
+    <ClCompile Include="..\..\..\engine\lightmap.cpp" />
+    <ClCompile Include="..\..\..\engine\normal.cpp" />
+    <ClCompile Include="..\..\..\engine\octa.cpp" />
+    <ClCompile Include="..\..\..\engine\octaedit.cpp" />
+    <ClCompile Include="..\..\..\engine\octarender.cpp" />
+    <ClCompile Include="..\..\..\engine\physics.cpp" />
+    <ClCompile Include="..\..\..\engine\pvs.cpp" />
+    <ClCompile Include="..\..\..\engine\world.cpp" />
+    <ClCompile Include="..\..\..\engine\worldio.cpp" />
+    <ClCompile Include="..\..\..\engine\command.cpp" />
+    <ClCompile Include="..\..\..\engine\console.cpp" />
+    <ClCompile Include="..\..\..\engine\main.cpp" />
+    <ClCompile Include="..\..\..\engine\menus.cpp" />
+    <ClCompile Include="..\..\..\engine\movie.cpp" />
+    <ClCompile Include="..\..\..\engine\sound.cpp" />
+    <ClCompile Include="..\..\..\engine\3dgui.cpp" />
+    <ClCompile Include="..\..\..\engine\bih.cpp" />
+    <ClCompile Include="..\..\..\engine\blob.cpp" />
+    <ClCompile Include="..\..\..\engine\decal.cpp" />
+    <ClCompile Include="..\..\..\engine\dynlight.cpp" />
+    <ClCompile Include="..\..\..\engine\glare.cpp" />
+    <ClCompile Include="..\..\..\engine\grass.cpp" />
+    <ClCompile Include="..\..\..\engine\material.cpp" />
+    <ClCompile Include="..\..\..\engine\rendergl.cpp" />
+    <ClCompile Include="..\..\..\engine\rendermodel.cpp" />
+    <ClCompile Include="..\..\..\engine\renderparticles.cpp" />
+    <ClCompile Include="..\..\..\engine\rendersky.cpp" />
+    <ClCompile Include="..\..\..\engine\rendertext.cpp" />
+    <ClCompile Include="..\..\..\engine\renderva.cpp" />
+    <ClCompile Include="..\..\..\engine\shader.cpp" />
+    <ClCompile Include="..\..\..\engine\shadowmap.cpp" />
+    <ClCompile Include="..\..\..\engine\texture.cpp" />
+    <ClCompile Include="..\..\..\engine\water.cpp" />
+    <ClCompile Include="..\..\..\engine\client.cpp" />
+    <ClCompile Include="..\..\..\engine\server.cpp" />
+    <ClCompile Include="..\..\..\engine\serverbrowser.cpp" />
+    <ClCompile Include="..\..\..\krsgame\krs.cpp" />
+    <ClCompile Include="..\..\..\krsgame\krsents.cpp" />
+    <ClCompile Include="..\..\..\krsgame\krshud.cpp" />
+    <ClCompile Include="..\..\..\krsgame\krsrender.cpp" />
+    <ClCompile Include="..\..\..\krsgame\krsscript.cpp" />
+    <ClCompile Include="..\..\..\krsgame\krsstubs.cpp" />
+    <ClCompile Include="..\..\SDL_win32_main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\resources\krs.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

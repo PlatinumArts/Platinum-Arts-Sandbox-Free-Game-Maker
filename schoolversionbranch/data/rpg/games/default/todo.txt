@@ -1,0 +1,77 @@
+village map
+* Ahriman
+	Finish more dialogue paths
+	add a quest to fetch lanterns
+	teach the player how to infuse rocks with apple power! (it's kind of what Artificers do)
+
+* John
+	Write dialogue
+	Write quest parts
+		knows location of Ahriman's lanterns
+			note that getting the laterns before feeding him literally kills him (from starvation)
+
+* Gracy Grocer
+	Write Dialogue
+
+* Inga Inn
+	Write Dialogue
+
+* Renaldo Baker
+	Add means of getting apples
+		Climb trees (dex)
+		Chop down trees (strength)
+		Create using Ahriman's school of magic (int)
+		Hunting?
+
+* Larry Lumber
+	Create
+	Write Dialogue
+	Quest parts
+		Axe for chopping trees
+
+* Harry Hunter
+	Write Dialogue
+
+* Fatima Forager
+	Write Dialogue
+
+* Freddy Farmer
+	Create
+	Write Dialogue
+
+* Bilbo Blacksmith
+	Write Dialogue
+
+* Edger Elder
+	Write Dialogue
+		should offer assorted advice
+
+* Mitchell Miller
+	Write Dialogue
+
+- village militia; patrol area
+* Garry Guard
+	Set Patrol Route
+
+* Patty Patrol
+	Set Patrol Route
+
+* William Watch
+	Set Patrol Route
+
+* Sally Scout
+	Set Patrol Route
+
+* Sergey Sergeant
+	Set Patrol Route
+
+testing hall
+* redo most old stuff
+	Fedex guy
+	Shooting range
+	teleport test area
+	recipes
+	lulzy AI
+
+* add some means of unlocking the village teleport
+	some sort of platforming segment perhaps?

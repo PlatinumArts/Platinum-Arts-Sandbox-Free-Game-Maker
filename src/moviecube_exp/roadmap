@@ -1,0 +1,23 @@
+ROADMAP:
+--------
+
+DynamicEntity (dynent)
+*remove all game mode dependent stuff like attack, frags ... 
+
+NPC Manager (formerly aiman.h)
+*should manage multiple npc client classes (bloodfrontier ai, MovieCube actors ...)
+
+Controls
+*different types of Controls like ai, moviecube actors
+*ControlActor provide the Moviecube Actor Features from sourceforge Version
+*change Controls which is assigned to an npc client (change between actor and ai)
+
+Waypoint 
+*add waypoints for actors controls
+
+Actors
+*port actors from current sf version
+
+Modes (gamemode, gamestate):
+*make usage of mode (clientmode, servmode) mandatory (we have only one: machinima)
+*move gamestate data (weapons ...) into a mode class (srvmode->initclientgamestate)

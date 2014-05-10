@@ -1,0 +1,11 @@
+[Desktop Entry]
+Comment=Dedicated server for the First Person Shooter
+GenericName=Sandbox FPS server
+Name=Sandbox FPS server
+Icon=sandbox_fps
+Exec=sandbox -gfps --server
+Type=Application
+Categories=Applications;Game;
+StartupNotify=false
+Terminal=true
+

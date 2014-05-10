@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=Moviecube/Machinima
+GenericName=Sandbox machinima
+Name=Sandbox machinima
+Icon=sandbox_moviecube
+Exec=sandbox -gmovie
+Type=Application
+Categories=Applications;Game;
+StartupNotify=false

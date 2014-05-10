@@ -1,0 +1,4 @@
+0 - Tornado Blast
+1 - Storm Smash
+2 - Wind Smash
+3 - Piper's Spell

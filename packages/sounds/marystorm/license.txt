@@ -1,0 +1,31 @@
+pipersong = ERH synth flute.wav
+
+Author ERH
+
+http://www.freesound.org/samplesViewSingle.php?id=35809
+
+license: http://creativecommons.org/licenses/sampling+/1.0/
+
+Airblast.ogg
+http://opengameart.org/content/spell-4-fire
+Artist: Bart K.
+License(s):
+GNU GPL 2.0
+GNU GPL 3.0
+CC-BY-SA 3.0
+
+Zombie Sounds
+http://opengameart.org/content/zombies-sound-pack
+Artist: artisticdude
+License(s):
+GNU GPL 2.0
+GNU GPL 3.0
+CC-BY 3.0
+
+Tornado.ogg
+http://opengameart.org/content/whoosh-2
+Artist: Bart Kelsey
+License(s):
+GNU GPL 2.0
+GNU GPL 3.0
+CC-BY-SA 3.0

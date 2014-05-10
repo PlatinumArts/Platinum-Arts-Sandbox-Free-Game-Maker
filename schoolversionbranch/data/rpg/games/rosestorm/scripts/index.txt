@@ -1,0 +1,6 @@
+0 - player
+1 - mailman
+2 - zombies
+3 - piper
+4 - mike
+5 - pickups

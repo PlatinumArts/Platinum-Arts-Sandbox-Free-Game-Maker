@@ -1,0 +1,3 @@
+0 - tornado
+1 - fireball
+2 - melee hit

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=RolePlaying Game
+GenericName=Sandbox RPG
+Name=Sandbox RPG
+Icon=sandbox_rpg
+Exec=sandbox -grpg
+Type=Application
+Categories=Applications;Game;
+StartupNotify=false

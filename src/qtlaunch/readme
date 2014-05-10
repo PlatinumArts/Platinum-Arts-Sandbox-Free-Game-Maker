@@ -1,0 +1,15 @@
+To compile, you will require the Qt development files
+
+execute the following command to create the makefile
+
+	qmake -project . && qmake -makefile *.pro
+
+To compile the launcher, type
+
+	make
+
+To run it after compilation
+
+	./qtlaunch
+
+NOTE that it must be run form the root sandbox directory, as it looks for the sandbox binaries in ./bin/

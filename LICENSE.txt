@@ -1,0 +1,15 @@
+Platinum Arts Sandbox Sandbox Free 3D Game Maker is a product of Platinum Arts LLC.
+Product Webpage:  http://SandboxGameMaker.com
+Platinum Arts LLC Homepage (adults only) - http://PlatinumArts.Net 
+E-mail:  PlatinumArts@gmail.com
+
+You are free to use and redistribute Platinum Arts Sandbox Free 3D Game Maker
+(Sandbox) in binary and/or source code form if the following
+conditions are met:
+1.  This notice may not be removed or altered from any distribution. 
+2.  You must read and abide by the zlib/libpng licenses located in /src which pertains to the source code of Platinum Arts Sandbox Free 3D Game Maker, Moviecube and the Cube 2 source code which the project is based on. You can find the licenses in sandbox_src_license.txt, moviecube_license, and Cube_2_enginelicense.txt
+3.  If you create a "Sandbox Project" for distribution in Platinum Arts Sandbox Free 3D Game Maker, you are encouraged to contact Platinum Arts LLC and provide information about the project.  Also you MUST credit Platinum Arts Sandbox on your webpage, software and/or documentation, someplace where it makes it clear that Sandbox was the base for your project. Links to our webpage on your webpage are the most preferred.  You are also encouraged keep your source open and available for inclusion in Platinum Arts Sandbox Free 3D Game Maker to help further the project. 
+4.  When you submit content (e.g. packages, maps, models) for inclusion in Platinum Arts Sandbox Free 3D Game Maker you grant Platinum Arts LLC a Creative Commons 3.0 - BY SA license to copy, modify, and redistribute the submitted content unless another license is submitted with the content. Authors of the content will be credited and they retain the copyright of their work.
+5.  Most content includes an individual readme with licensing information however if there is content you wish to use that is lacking a license please contact us for clarification.
+6.  This software is provided 'as-is', without any express or implied warranty.  In no event will the authors be held liable for any damages or any other problems arising from the use of this software. 
+7. NOTE TO EDUCATORS - If you use this software in an educational setting, we request that you send us an e-mail and tell us where and how it is being used.  Additonally we'd appreciate feedback on student reaction and how things work out.  It would be much appreciated if you posted your experiences here: http://forum.sandboxgamemaker.com/viewforum.php?f=17
