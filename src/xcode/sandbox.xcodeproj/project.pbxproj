@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B1CC07E12825D810098372A /* 3dgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CC03C12825D810098372A /* 3dgui.cpp */; };
 		1B1CC07F12825D810098372A /* animmodel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CC03D12825D810098372A /* animmodel.h */; };
 		1B1CC08012825D810098372A /* bih.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CC03E12825D810098372A /* bih.cpp */; };
 		1B1CC08112825D810098372A /* bih.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CC03F12825D810098372A /* bih.h */; };
@@ -33,7 +32,6 @@
 		1B1CC09612825D810098372A /* md2.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CC05412825D810098372A /* md2.h */; };
 		1B1CC09712825D810098372A /* md3.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CC05512825D810098372A /* md3.h */; };
 		1B1CC09812825D810098372A /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CC05612825D810098372A /* md5.h */; };
-		1B1CC09912825D810098372A /* menus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CC05712825D810098372A /* menus.cpp */; };
 		1B1CC09A12825D810098372A /* model.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CC05812825D810098372A /* model.h */; };
 		1B1CC09B12825D810098372A /* movie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CC05912825D810098372A /* movie.cpp */; };
 		1B1CC09C12825D810098372A /* mpr.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1CC05A12825D810098372A /* mpr.h */; };
@@ -145,7 +143,6 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		1B1CC03C12825D810098372A /* 3dgui.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = 3dgui.cpp; sourceTree = "<group>"; };
 		1B1CC03D12825D810098372A /* animmodel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = animmodel.h; sourceTree = "<group>"; };
 		1B1CC03E12825D810098372A /* bih.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = bih.cpp; sourceTree = "<group>"; };
 		1B1CC03F12825D810098372A /* bih.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = bih.h; sourceTree = "<group>"; };
@@ -171,7 +168,6 @@
 		1B1CC05412825D810098372A /* md2.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = md2.h; sourceTree = "<group>"; };
 		1B1CC05512825D810098372A /* md3.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = md3.h; sourceTree = "<group>"; };
 		1B1CC05612825D810098372A /* md5.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
-		1B1CC05712825D810098372A /* menus.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = menus.cpp; sourceTree = "<group>"; };
 		1B1CC05812825D810098372A /* model.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
 		1B1CC05912825D810098372A /* movie.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = movie.cpp; sourceTree = "<group>"; };
 		1B1CC05A12825D810098372A /* mpr.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = mpr.h; sourceTree = "<group>"; };
@@ -358,7 +354,6 @@
 		1B1CC03B12825D810098372A /* engine */ = {
 			isa = PBXGroup;
 			children = (
-				1B1CC03C12825D810098372A /* 3dgui.cpp */,
 				1B1CC03D12825D810098372A /* animmodel.h */,
 				1B1CC03E12825D810098372A /* bih.cpp */,
 				1B1CC03F12825D810098372A /* bih.h */,
@@ -384,7 +379,6 @@
 				1B1CC05412825D810098372A /* md2.h */,
 				1B1CC05512825D810098372A /* md3.h */,
 				1B1CC05612825D810098372A /* md5.h */,
-				1B1CC05712825D810098372A /* menus.cpp */,
 				1B1CC05812825D810098372A /* model.h */,
 				1B1CC05912825D810098372A /* movie.cpp */,
 				1B1CC05A12825D810098372A /* mpr.h */,
@@ -687,7 +681,6 @@
 			files = (
 				B94198A809207E810029DAD1 /* SDLMain.m in Sources */,
 				666E40F00B67D87F005B491F /* macutils.mm in Sources */,
-				1B1CC07E12825D810098372A /* 3dgui.cpp in Sources */,
 				1B1CC08012825D810098372A /* bih.cpp in Sources */,
 				1B1CC08212825D810098372A /* blend.cpp in Sources */,
 				1B1CC08312825D810098372A /* blob.cpp in Sources */,
@@ -701,7 +694,6 @@
 				1B1CC09012825D810098372A /* lightmap.cpp in Sources */,
 				1B1CC09312825D810098372A /* main.cpp in Sources */,
 				1B1CC09512825D810098372A /* material.cpp in Sources */,
-				1B1CC09912825D810098372A /* menus.cpp in Sources */,
 				1B1CC09B12825D810098372A /* movie.cpp in Sources */,
 				1B1CC09D12825D810098372A /* normal.cpp in Sources */,
 				1B1CC09F12825D810098372A /* octa.cpp in Sources */,
